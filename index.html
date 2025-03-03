@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelling Japan</title>
+    <style>
+      body {
+        background: rgb(113, 145, 243);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .intro-pic {
+        transition: transform 150ms ease-in-out;
+      }
+
+      .intro-pic:hover {
+        transform: scale(1.2);
+        opacity: 0.7;
+        border-radius: 10px;
+      }
+
+      .container {
+        background: rgb(255, 255, 255, 0.7);
+        max-width: 800px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px auto;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .grid img {
+        height: 100%;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+
+      .container button {
+        transition: all 150ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+      }
+
+      button:hover {
+        background: rgb(164, 163, 163);
+      }
+
+      .theme button {
+        transition: all 150ms ease-in-out;
+        background: black;
+        color: white;
+      }
+
+      footer {
+        margin: 10px;
+        text-align: center;
+      }
+
+      .dark {
+        background-color: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgb(255, 255, 255, 0.2);
+      }
+
+      .dark a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Dark Theme</button>
+    <div class="container">
+      <h1>Japan Travel</h1>
+      <h2>My favorite travel destination</h2>
+      <a href="https://en.wikipedia.org/wiki/Japan" target="_blank"
+        ><img
+          class="intro-pic"
+          id="japan"
+          src="https://creatingstories.nl/wp-content/uploads/2023/06/informatie-japan-2048x789.jpg"
+          alt="Japan"
+      /></a>
+      <div class="grid">
+        <img
+          id="tokyo"
+          src="https://www.advantour.com/img/japan/images/tokyo.jpg"
+          alt="Tokyo"
+        />
+        <img
+          id="hiroshima"
+          src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/39/82/65.jpg"
+          alt="Hiroshima"
+        />
+        <img
+          id="osaka"
+          src="https://lp-cms-production.imgix.net/2023-02/GettyImages-1071391480.jpeg"
+          alt="Osaka"
+        />
+        <img
+          id="kyoto"
+          src="https://cdn.adventure-life.com/13/15/01/kyoto/1300x820.webp"
+          alt="Kyoto"
+        />
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+        molestiae nulla reiciendis deserunt reprehenderit sequi omnis dolorem
+        tempore culpa fugiat! Quam praesentium consequuntur doloremque quidem
+        suscipit! Vitae accusantium at natus ad soluta. Illum quibusdam commodi
+        non nisi deserunt ea? Fugit repudiandae molestiae corporis architecto
+        quam voluptatum, consequuntur libero error. Optio, eveniet veniam fugiat
+        quam maxime quod quas officiis. Unde eum expedita cumque assumenda
+        vitae, hic optio earum! Impedit perferendis quos accusantium ipsa
+        excepturi nihil, distinctio hic inventore provident doloremque amet
+        eaque, ab quae cumque tenetur eligendi aliquid dignissimos maiores ipsam
+        quia. Cupiditate eos ipsum rem doloribus officia. Eos, esse nobis?
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank"
+        >Read more on Wikipedia</a
+      >
+      <button>Travel to Japan</button>
+    </div>
+    <footer>
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/maria-feminina-escalante-kok-67437b91/"
+        target="_blank"
+      >
+        Maria Kok</a
+      >
+    </footer>
+
+    <script>
+      function darkmode() {
+        let body = document.querySelector("body");
+        //body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+          themeButton.innerHTML = "Light mode";
+        }
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", darkmode);
+    </script>
+  </body>
+</html>
