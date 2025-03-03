@@ -18,6 +18,14 @@
         width: 100%;
       }
 
+      button {
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: rgb(164, 163, 163);
+      }
+
       .intro-pic {
         transition: transform 150ms ease-in-out;
       }
@@ -52,17 +60,11 @@
       }
 
       .container button {
-        transition: all 150ms ease-in-out;
         display: block;
         margin: 0 auto;
       }
 
-      button:hover {
-        background: rgb(164, 163, 163);
-      }
-
-      .theme button {
-        transition: all 150ms ease-in-out;
+      .themeButton {
         background: black;
         color: white;
       }
@@ -84,10 +86,20 @@
       .dark a {
         color: white;
       }
+
+      .dark .themeButton {
+        background: white;
+        color: black;
+        transition: all 150ms ease-in-out;
+      }
+
+      .dark .themeButton:hover {
+        background: rgb(164, 163, 163);
+      }
     </style>
   </head>
   <body>
-    <button class="theme">Dark Theme</button>
+    <button class="themeButton">Dark mode</button>
     <div class="container">
       <h1>Japan Travel</h1>
       <h2>My favorite travel destination</h2>
@@ -155,13 +167,14 @@
 
         if (body.classList.contains("dark")) {
           body.classList.remove("dark");
+          themeButton.innerHTML = "Dark mode";
         } else {
           body.classList.add("dark");
           themeButton.innerHTML = "Light mode";
         }
       }
 
-      let themeButton = document.querySelector(".theme");
+      let themeButton = document.querySelector(".themeButton");
       themeButton.addEventListener("click", darkmode);
     </script>
   </body>
