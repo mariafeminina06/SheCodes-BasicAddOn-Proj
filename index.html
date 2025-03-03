@@ -148,7 +148,7 @@
       <a href="https://en.wikipedia.org/wiki/Travel" target="_blank"
         >Read more on Wikipedia</a
       >
-      <button>Travel to Japan</button>
+      <button class="actionButton">Travel to Japan</button>
     </div>
     <footer>
       Coded by
@@ -161,6 +161,13 @@
     </footer>
 
     <script>
+      function promptResponse() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let emoji = prompt("What is your favorite emoji?");
+
+        alert("Thank you, " + name + "! We'll be in touch by email! " + emoji);
+      }
       function darkmode() {
         let body = document.querySelector("body");
         //body.classList.toggle("dark");
@@ -176,6 +183,9 @@
 
       let themeButton = document.querySelector(".themeButton");
       themeButton.addEventListener("click", darkmode);
+
+      let actionButton = document.querySelector(".actionButton");
+      actionButton.addEventListener("click", promptResponse);
     </script>
   </body>
 </html>
